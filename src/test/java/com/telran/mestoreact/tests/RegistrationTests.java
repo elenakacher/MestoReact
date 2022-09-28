@@ -19,7 +19,7 @@ public class RegistrationTests extends TestBase{
     public void registrationPositiveTest(){
         app.getUserHelper().registration();
 
-        app.getHeaderHelper().pause(4000);
+        app.getHeaderHelper().pause(5000);
         Assert.assertTrue(app.getHeaderHelper().isElementPresent(By.xpath("//button[contains(text(),'Log in')]")));
 
     }

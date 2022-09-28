@@ -9,7 +9,7 @@ public class LogoutTests extends TestBase{
 
     @BeforeMethod
     public void ensurePrecondition() {
-        app.getHeaderHelper().pause(1000);
+        app.getHeaderHelper().pause(500);
         if (!app.getHeaderHelper().isLogoutLinkPresent()) {
             app.getUserHelper().login();
         }
@@ -17,8 +17,9 @@ public class LogoutTests extends TestBase{
 
     @Test
     public void logoutPositiveTest() {
+        app.getHeaderHelper().pause(1000);
         app.getUserHelper().logout();
-        Assert.assertTrue(app.getHeaderHelper().isElementPresent(By.className("header__email")));
+        Assert.assertTrue(app.getHeaderHelper().isElementPresent(By.xpath("//h2[contains(text(),'Log in')]")));
     }
 
 }

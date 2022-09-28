@@ -28,7 +28,7 @@ public class UserHelper extends HelperBase{
     }
 
     public void logout() {
-        click(By.xpath("//*[contains(text(),'Log Out')]"));
+        click(By.xpath("//*[contains(text(),'Log out')]"));
     }
 
 }

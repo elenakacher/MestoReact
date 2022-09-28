@@ -10,6 +10,11 @@ public class ApplicationManager {
     WebDriver wd;
     HeaderHelper headerHelper;
     UserHelper userHelper;
+    FotoHelper fotoHelper;
+
+    public FotoHelper getFotoHelper() {
+        return fotoHelper;
+    }
 
     public UserHelper getUserHelper() {
         return userHelper;
@@ -27,10 +32,9 @@ public class ApplicationManager {
 
         headerHelper = new HeaderHelper(wd);
         userHelper = new UserHelper(wd);
+        fotoHelper = new FotoHelper(wd);
 
     }
-
-
     public void stop() {
         wd.quit();
     }

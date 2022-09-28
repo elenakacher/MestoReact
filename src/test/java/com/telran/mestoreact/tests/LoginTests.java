@@ -10,7 +10,7 @@ public class LoginTests extends TestBase {
 
     @BeforeMethod
     public void ensurePrecondition() {
-        app.getHeaderHelper().pause(1000);
+        app.getHeaderHelper().pause(500);
         if (!app.getHeaderHelper().isRegisterLinkPresent()) {
             app.getHeaderHelper().clickOnLoginButton();
         }
